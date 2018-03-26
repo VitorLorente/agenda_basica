@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda online</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+    <div class="site-wrapper">
+            
+        <div class="site-wrapper-inner">
+
+            <div class="container">
+
+                <div class="masthead clearfix">
+                    <div class="container inner">
+                        <h3 class="masthead-brand">Agenda Online</h3>
+                        <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="#">Minha conta</a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+{% block body %}{% endblock %} 
+        </div>   
+    </div>
+</body>
+
+</html>

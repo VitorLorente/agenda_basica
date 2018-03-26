@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Celular</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contato in contatos %}
+                    <tr>
+                        <td>{{ contato.nome }} {{ contato.sobrenome }}</td>
+                        <td>{{ contato.email }}</td>
+                        <td>{{ contato.tel_fixo }}</td>
+                        <td>{{ contato.cel }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

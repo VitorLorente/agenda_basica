@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+            <div class="option-list">
+                <div class="options">
+                    <a class="btn bt-color btn-position btn-size" href="{% url 'adicionar' %}">
+                        <span class="glyphicon glyphicon-plus icon-size"></span>
+                    </a>
+                    <div class="options-description">
+                        <h4>ADICIONAR CONTATO</h4>
+                        <p>Você pode pesquisar seus contatos por nome, número do telefone ou e-mail!</p>
+                    </div>
+                </div>
+                <div class="options">
+                    <a class="btn bt-color btn-position btn-size" href="{% url 'listar' %}">
+                        <span class="glyphicon glyphicon-align-justify icon-size"></span>
+                    </a>
+                    <div class="options-description">
+                        <h4>LISTA DE CONTATOS</h4>
+                        <p>Você pode pesquisar seus contatos por nome, número do telefone ou e-mail!</p>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

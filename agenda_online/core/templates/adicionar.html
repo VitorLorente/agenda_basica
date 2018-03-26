@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+{% load widget_tweaks %}
+
+            <div class="forms_add">
+                {{ form.non_field_errors }}
+                <form name="contato" id="contato" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field.error }}
+                    <div class="form-group">
+                        <label for="{{ field.name }}" class="label-style">{{ field.label_tag }}</label><br><br>
+                        {{ field|attr:"class:form-control form-style"}}
+                        {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                    <button type="submit" class="btn btn-success cadastrar-btn">Cadastrar</button>
+                </form>
+            </div>
+{% endblock %}
